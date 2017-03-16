@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.connection.datasource">jdbc/Library</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">qwe12312</property>
+    <mapping resource="com/alexfrei/jsf/web/entity/Autor.hbm.xml"/>
+    <mapping class="com.alexfrei.jsf.web.entity.Autor"/>
+    <mapping resource="com/alexfrei/jsf/web/entity/Book.hbm.xml"/>
+    <mapping class="com.alexfrei.jsf.web.entity.Book"/>
+    <mapping resource="com/alexfrei/jsf/web/entity/Genre.hbm.xml"/>
+    <mapping class="com.alexfrei.jsf.web.entity.Genre"/>
+    <mapping resource="com/alexfrei/jsf/web/entity/Publisher.hbm.xml"/>
+    <mapping class="com.alexfrei.jsf.web.entity.Publisher"/>
+    <mapping resource="com/alexfrei/jsf/web/entity/Vote.hbm.xml"/>
+    <mapping class="com.alexfrei.jsf.web.entity.Vote"/>
+  </session-factory>
+  <!--<session-factory>-->
+    <!--&lt;!&ndash;<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/library?zeroDateTimeBehavior=convertToNull</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.show_sql">true</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.current_session_context_class">thread</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.connection.datasource">jdbc/Library</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.connection.username">root</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.connection.password">qwe12312</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/alexfrei/jsf/web/entity/Genre.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/alexfrei/jsf/web/entity/Author.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/alexfrei/jsf/web/entity/Book.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/alexfrei/jsf/web/entity/Publisher.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;<mapping resource="com/alexfrei/jsf/web/entity/Vote.hbm.xml"/>&ndash;&gt;-->
+    <!--&lt;!&ndash; <property name="connection.username"/> &ndash;&gt;-->
+    <!--&lt;!&ndash; <property name="connection.password"/> &ndash;&gt;-->
+
+    <!--&lt;!&ndash; DB schema will be updated if needed &ndash;&gt;-->
+    <!--&lt;!&ndash; <property name="hbm2ddl.auto">update</property> &ndash;&gt;-->
+  <!--</session-factory>-->
+</hibernate-configuration>
